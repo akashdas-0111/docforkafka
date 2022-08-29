@@ -1,0 +1,21 @@
+cd opt/bitnami/kafka/bin
+
+kafka-topics.sh --alter --topic testdemo --partitions 2 --bootstrap-server localhost:9092
+
+kafka-topics.sh --describe --topic akashtest1 --bootstrap-server localhost:9092
+
+kafka-console-producer.sh --topic testdemo --bootstrap-server localhost:9092
+
+kafka-console-consumer.sh --topic testdemo --from-beginning --bootstrap-server localhost:9092
+
+consumer-cd Desktop/MQTT/mqtt-tutorial/cmd/kafka_consumer/
+
+producer-cd Desktop/MQTT/mqtt-tutorial/cmd/kafka_producer/
+
+kafka-topics.sh --zookeeper localhost:2181 --delete --topic testdemo
+
+Topics creates till now
+- test
+- testdemo
+- test1
+- akashtest
